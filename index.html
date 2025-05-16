@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Find Your Table</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+    #searchBox {
+      padding: 10px;
+      width: 300px;
+      font-size: 16px;
+    }
+    #result {
+      margin-top: 20px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome! Find Your Table</h1>
+  <input type="text" id="searchBox" placeholder="Enter your full name">
+  <p id="result"></p>
+
+  <script>
+    const guests = {
+      "Shannon Rodriguez": "Table 3",
+      "Charles Brown": "Table 6",
+      "Adam Dougherty": "Table 8",
+      "Samantha Terry": "Table 1",
+      "Travis Brown": "Table 8",
+      "Matthew Harris": "Table 3",
+      "James Wolf": "Table 9",
+      "Christopher Meyers": "Table 9",
+      "Sarah Newman": "Table 9",
+      "Andrea Porter": "Table 7",
+      "Patrick Keith": "Table 3",
+      "Steve Lang": "Table 10",
+      "Matthew Ramsey": "Table 4",
+      "Mrs. Regina Ward": "Table 3",
+      "Brandon Turner": "Table 5",
+      "Kathleen Ortega": "Table 9",
+      "Christopher Thompson": "Table 6",
+      "Anna Gonzalez": "Table 6",
+      "Ann Reynolds": "Table 2",
+      "Elizabeth Pratt": "Table 1",
+      "Rebecca Lane": "Table 5",
+      "Lisa Baker": "Table 9",
+      "Jeff Jones": "Table 6",
+      "Aaron Cardenas": "Table 9",
+      "Paul Carpenter PhD": "Table 10",
+      "Brian Smith": "Table 3",
+      "Joseph Levy": "Table 7",
+      "Christina Evans": "Table 8",
+      "William Brown": "Table 6",
+      "Jeremy Robertson": "Table 10",
+      "Cody Sullivan": "Table 3",
+      "John Chambers": "Table 6",
+      "Brooke Ryan": "Table 8",
+      "Tammy Valdez": "Table 4",
+      "Wendy Thomas": "Table 10",
+      "Brenda Clark": "Table 9",
+      "John Scott": "Table 5",
+      "Heather Kent": "Table 9",
+      "Alexa Solomon": "Table 9",
+      "Joseph Lambert": "Table 2",
+      "Shannon Collier": "Table 5",
+      "Donald Farmer": "Table 10",
+      "Mrs. Ashley Cameron DVM": "Table 2",
+      "Elizabeth Nelson": "Table 1",
+      "Linda Turner": "Table 5",
+      "Jessica Boyer": "Table 1",
+      "Nicole Daniels": "Table 7",
+      "Shannon King": "Table 9",
+      "Zachary Roth": "Table 6",
+      "Jeremy Burgess": "Table 2",
+      "Paul Cervantes": "Table 4",
+      "John Graves": "Table 1",
+      "Roberto Copeland": "Table 1",
+      "Victoria Howard": "Table 7",
+      "Gabriella Santiago": "Table 1",
+      "Tina Dawson": "Table 8",
+      "Lucas Rivera": "Table 7",
+      "Matthew Frost": "Table 5",
+      "Jane Newman": "Table 10",
+      "Shawn Williams": "Table 8",
+      "Abigail Brown": "Table 3",
+      "Gregory Phillips": "Table 6",
+      "Kimberly Hall": "Table 9",
+      "Edward Lee": "Table 1",
+      "Katelyn Burke": "Table 10",
+      "Timothy Young": "Table 10",
+      "Robert Duncan": "Table 7",
+      "Levi Hunt": "Table 3",
+      "Travis Graham": "Table 7",
+      "Sara Acosta": "Table 1",
+      "Aaron Craig": "Table 5",
+      "Joseph Townsend": "Table 2",
+      "Trevor White": "Table 8",
+      "William Garner": "Table 8",
+      "Edward Hatfield": "Table 10",
+      "Krista Miller": "Table 4",
+      "Lauren Herrera": "Table 2",
+      "James King": "Table 7",
+      "Paul White": "Table 3"
+    };
+
+    document.getElementById("searchBox").addEventListener("input", function () {
+      const name = this.value.trim();
+      const table = guests[name];
+      document.getElementById("result").innerText = table
+        ? `You're seated at ${table}`
+        : "Name not found. Please check spelling.";
+    });
+  </script>
+</body>
+</html>
